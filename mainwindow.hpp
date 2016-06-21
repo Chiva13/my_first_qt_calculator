@@ -29,10 +29,16 @@ private:
     std::vector<std::shared_ptr<QPushButton>> my_buttons;
 public slots:
 
-    void onButtonClicked()
+    void onButton_1_Clicked()
     {
-        qDebug() << "onButtonCLiked";
-        ui->label->setText("TEXT!");
+        qDebug() << "onButton_1_Clicked";
+        ui->label_Intermediate->setText("1");
+    }
+
+    void onButton_2_Clicked()
+    {
+        qDebug() << "onButton_2_Clicked";
+        ui->label_Intermediate->setText("2");
     }
 
    // void onButtonAdd()
