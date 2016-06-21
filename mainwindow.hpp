@@ -8,7 +8,7 @@
 #include "ui_mainwindow.h"
 //#include <iostream>
 #include <QDebug>
-#include <Qstring>
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -28,13 +28,14 @@ private:
 
     QPushButton my_button;
     std::vector<std::shared_ptr<QPushButton>> my_buttons;
-    std::vector<string> memory;
+    std::vector<QString> memory;
 public slots:
 
     void onButton_1_Clicked()
     {
         qDebug() << "onButton_1_Clicked";
         ui->label_Intermediate->setText("1");
+        memory.push_back(1);
     }
 
     void onButton_2_Clicked()
